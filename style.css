@@ -8,7 +8,7 @@ body {
     justify-content: flex-start; /* Align content to the top */
     align-items: center; /* Horizontally center the proverb list container */
     min-height: 100vh;
-    background-color: #fff8f5; /* Soft warm white background */
+    background-color: #f9f7e8;
     color: #333;
     line-height: 1.6;
     text-align: left; /* Ensure all text within body is left-aligned */
