@@ -17,19 +17,14 @@ body {
 
 /* --- Main Emoji Grid Styling --- */
 .emoji-grid-container {
-       display: grid;
-    /* --- Change from repeat(3, 1fr) to repeat(5, 1fr) --- */
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* --- Change from repeat(3, 1fr) to repeat(5, 1fr) --- */
     grid-template-rows: repeat(5, 1fr);
     width: 100%;
-    /* --- Increase max-width to accommodate 5 columns --- */
-    max-width: 600px; /* Adjust this value as needed for your layout */
+    /* --- Increased max-width for wider grid --- */
+    max-width: 800px; /* Increased max width */
     margin: 0 auto;
-    /* Optional: Add gap and borders if you prefer this method for grid lines */
-    gap: 1px; /* Adds a small gap between grid items */
-    border-top: 1px solid #eee; /* Top border for the whole grid */
-    border-left: 1px solid #eee; /* Left border for the whole grid */
+    gap: 20px; /* Increased gap */
 }
 
 .grid-item {
