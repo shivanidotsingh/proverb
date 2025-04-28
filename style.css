@@ -221,6 +221,7 @@ body {
         padding-bottom: 20px;
      }
      .main-phrase {
+        opacity: 0.5;
         font-size: 1.8em;
         margin-bottom: 10px; /* Adjust space */
     }
@@ -229,7 +230,7 @@ body {
         margin-bottom: 6px; /* Adjust space */
     }
     .literal-translation {
-         font-size: 0.9em; /* Adjust small font size */
+         font-size: 1.8em; /* Adjust small font size */
          margin-bottom: 5px; /* Adjust space */
     }
      .meaning-text {
