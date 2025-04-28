@@ -148,23 +148,29 @@ body {
     line-height: 1.6;
 }
 
-/* Style for the back link */
-p a {
-    display: inline-block;
-    margin-top: 40px;
-    text-decoration: none;
-    color: #0056b3;
-    padding: 10px 20px;
-    border: 1px solid #0056b3;
-    border-radius: 5px;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-    font-size: 1em;
+/* Back link */
+.back-link-container {
+    position: fixed; /* --- Fix position relative to the viewport --- */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    padding: 15px 20px; /* --- Add padding around the link --- */
+    background-color: #fff8f5; /* Match body background */
+    z-index: 1000; /* Ensure it's above other content */
+    /* --- REMOVED: width: 100%; --- */ /* Allow content to define width */
+    /* --- REMOVED: box-sizing: border-box; --- */
+    border-bottom: 1px solid #eee; /* Optional: thin line below the header area */
 }
 
-p a:hover {
-    background-color: #0056b3;
-    color: white;
-    border-color: #0056b3;
+.back-link {
+    font-size: 1.5em; /* Larger arrow */
+    text-decoration: none;
+    color: #0056b3; /* Link color */
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.back-link:hover {
+    color: #003366; /* Darker color on hover */
 }
 
 /* Optional: Responsive adjustments */
