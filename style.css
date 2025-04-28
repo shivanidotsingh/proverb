@@ -8,7 +8,7 @@ body {
     justify-content: flex-start; /* Align content to the top */
     align-items: center; /* Horizontally center the proverb list container */
     min-height: 100vh;
-    background-color: #f9f7e8;
+    background-color: #EFE8D8;
     color: #333;
     line-height: 1.6;
     text-align: left; /* Ensure all text within body is left-aligned */
@@ -140,7 +140,7 @@ body {
 /* Style for Meaning text */
 .meaning-text {
     font-size: 1em; /* Standard body text size */
-    color: #555;
+    opacity: 0.5;
     margin-top: 0; /* Space above handled by literal-translation margin-bottom */
     margin-bottom: 0; /* No margin below */
     display: block;
@@ -153,10 +153,8 @@ body {
     top: 0; /* Align to the top edge */
     left: 0; /* Align to the left edge */
     padding: 15px 20px; /* --- Add padding around the link --- */
-    background-color: #fff8f5; /* Match body background */
+    background-color: #EFE8D8; /* Match body background */
     z-index: 1000; /* Ensure it's above other content */
-    /* --- REMOVED: width: 100%; --- */ /* Allow content to define width */
-    /* --- REMOVED: box-sizing: border-box; --- */
     border-bottom: 1px solid #eee; /* Optional: thin line below the header area */
 }
 
@@ -232,6 +230,7 @@ body {
     }
      .meaning-text {
          font-size: 0.9em; /* Adjust small font size */
+         opacity: 0.5;
      }
     .grid-item {
          font-size: 2.5em;
