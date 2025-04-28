@@ -106,8 +106,9 @@ body {
     /* Optional: Add padding or margin between spans if needed */
 }
 
-/* Style for the main Proverb/Idiom phrase (MUCH LARGER text) */
+/* Style for the main Proverb/Idiom phrase */
 .main-phrase {
+    opacity: 0.5;
     font-size: 2.5em; 
     margin-top: 0; /* Space above handled by language-translit-above margin-bottom */
     margin-bottom: 15px; /* Space between the phrase and details below */
