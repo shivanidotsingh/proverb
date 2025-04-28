@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif; /* Or choose a nice web font */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Make body at least viewport height */
+    background-color: #f4f4f4; /* Light background */
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #0056b3; /* A shade of blue */
+}
+
+.emoji-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+    grid-template-rows: repeat(3, 1fr);    /* 3 rows, equal height */
+    gap: 15px; /* Space between grid items */
+    width: 100%; /* Take full width available in padding */
+    max-width: 600px; /* Max width for the grid container */
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    background-color: #fff; /* White background for items */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Slightly rounded corners */
+    display: flex; /* Use flexbox to center content (the emoji) */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 3em; /* Large emoji size */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit color from body */
+    aspect-ratio: 1 / 1; /* Keep items square */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2); /* More prominent shadow on hover */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Optional: Adjust font size for very small screens if needed */
+@media (max-width: 400px) {
+    .grid-item {
+        font-size: 2.5em;
+    }
+}
