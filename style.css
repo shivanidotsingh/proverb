@@ -108,13 +108,12 @@ body {
 
 /* Style for the main Proverb/Idiom phrase (MUCH LARGER text) */
 .main-phrase {
-    font-size: 2.8em; /* MUCH LARGER font size */
-    font-weight: bold;
+    font-size: 2.5em; 
     margin-top: 0; /* Space above handled by language-translit-above margin-bottom */
     margin-bottom: 15px; /* Space between the phrase and details below */
-    color: #555;
+    color: #111;
     word-wrap: break-word;
-    line-height: 1.2;
+    line-height: 1;
     /* Inherit text-align: left from body */
 }
 
@@ -129,11 +128,11 @@ body {
 
 /* Style for Literal Translation */
 .literal-translation {
-    font-size: 2.8em; /* Standard body text size */
+    font-size: 2.5em;
     color: #111;
     margin-bottom: 8px; /* Space below Literal Translation */
     display: block; /* Ensure it takes its own line */
-    line-height: 1.6;
+    line-height: 1;
     /* Add font-style: italic; if you want Literal Trans to be italic */
     /* font-style: italic; */
 }
