@@ -5,87 +5,93 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center; /* Center the main content block horizontally */
     min-height: 100vh; /* Make body at least viewport height */
-    background-color: #f4f4f4; /* Light background */
+    background-color: #ffffff; /* Clean white background */
     color: #333;
     line-height: 1.6; /* Improve readability for body text */
+    text-align: left; /* Ensure all text within body is left-aligned */
 }
 
-h1 {
-    margin-top: 0;
-    margin-bottom: 30px;
-    color: #0056b3; /* A shade of blue */
-    text-align: center;
-}
-
-/* --- Main Emoji Grid Styling --- */
+/* --- Main Emoji Grid Styling (No changes needed here for ice page styling) --- */
 .emoji-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
     grid-template-rows: repeat(3, 1fr);    /* 3 rows, equal height */
-    gap: 15px; /* Space between grid items */
-    width: 100%; /* Take full width available in padding */
-    max-width: 600px; /* Max width for the grid container */
-    margin-bottom: 20px;
+    gap: 20px; /* Slightly more gap */
+    width: 100%;
+    max-width: 650px; /* Slightly wider max width */
+    margin-bottom: 40px;
+     /* Adjust margin-top if you remove h1 from index page too */
+     /* margin-top: 40px; */
 }
 
 .grid-item {
-    background-color: #fff; /* White background for items */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Slightly rounded corners */
-    display: flex; /* Use flexbox to center content (the emoji) */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-size: 3em; /* Large emoji size */
-    text-decoration: none; /* Remove underline from link */
-    color: inherit; /* Inherit color from body */
-    aspect-ratio: 1 / 1; /* Keep items square */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
-    text-align: center; /* Ensure emoji stays centered */
+    background-color: #f9f9f9; /* Off-white background for items */
+    border: 1px solid #eee; /* Very light border */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em; /* Larger emoji */
+    text-decoration: none;
+    color: inherit;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Lighter shadow */
 }
 
 .grid-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2); /* More prominent shadow on hover */
-    cursor: pointer; /* Indicate it's clickable */
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.1); /* More prominent shadow */
+    background-color: #eef; /* Light hover color */
+    cursor: pointer;
 }
+
 
 /* --- Proverbs List Page Styling --- */
 .proverb-list {
-    width: 100%; /* Take full width available in padding */
-    max-width: 700px; /* Max width for the list container */
-    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; /* Max width for the list container - allow more space for left-aligned text */
+    margin-top: 40px; /* --- Added margin-top now that h1 is gone --- */
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .meaning-group {
-    margin-bottom: 30px; /* Space out different meaning groups */
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* More space out different meaning groups */
+    padding: 0; /* Remove padding from the group container itself */
+    background-color: transparent; /* No background on the group */
+    border: none; /* No border on the group */
+    box-shadow: none; /* No shadow on the group */
 }
 
 /* Style for the Meaning Group Title (as a less prominent label/tag) */
 .meaning-group-title {
+    display: block; /* Ensure it takes its own line */
     margin-top: 0;
-    margin-bottom: 15px; /* Space below the title */
-    padding-bottom: 8px; /* Space below the text and before the line */
-    border-bottom: 1px dashed #ccc; /* A subtle dashed line separator */
-    color: #555; /* A muted color */
-    font-size: 1em; /* Standard text size, smaller than main-phrase */
-    font-weight: normal; /* Not bold */
-    font-style: italic; /* Make it italic to distinguish */
+    margin-bottom: 25px; /* Space below the title before the first proverb */
+    padding-bottom: 0; /* No padding below */
+    border-bottom: none; /* No border below the title */
+    color: #666; /* Muted color */
+    font-size: 0.9em; /* Smaller text size */
+    font-weight: normal;
+    font-style: italic;
+    text-transform: uppercase; /* Make it uppercase */
+    letter-spacing: 0.05em;
     line-height: 1.4; /* Improve readability */
 }
 
-/* Style for individual proverb items within the group */
+/* Style for individual proverb items within the group - MAKE THESE WELL SPACED */
 .proverb-item {
-    margin-bottom: 20px; /* Space between each proverb item */
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee; /* Solid line between proverbs */
+    margin-bottom: 30px; /* --- Space between each proverb item --- */
+    padding-bottom: 30px;
+    /* --- Thin line separating proverbs --- */
+    border-bottom: 1px solid #eee; /* Thin, light grey line */
+    /* Remove inner padding/background if you had it */
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .proverb-item:last-child {
@@ -94,4 +100,87 @@ h1 {
     margin-bottom: 0;
 }
 
-/* Style for the main Proverb/Idiom phrase (THIS IS THE LARGEST TEXT) */
+/* Style for the main Proverb/Idiom phrase (THIS IS THE LARGE HEADER TEXT) */
+.main-phrase {
+    font-size: 2.2em; /* Significantly larger font */
+    font-weight: bold;
+    margin-top: 0; /* Reset default paragraph/div margin */
+    margin-bottom: 10px; /* Space between the phrase and details */
+    color: #111; /* Bolder color */
+    word-wrap: break-word;
+    line-height: 1.3;
+}
+
+/* Style for the Details (Language, Translation, Meaning - this is the smaller text) */
+.details {
+    font-size: 1em; /* Standard body text size */
+    color: #555;
+    line-height: 1.6;
+    word-wrap: break-word;
+    margin-top: 0; /* Reset default margin */
+    margin-bottom: 0; /* Reset default margin */
+}
+
+/* Style for the back link */
+p a {
+    display: inline-block;
+    margin-top: 40px; /* More space above the back link */
+    text-decoration: none;
+    color: #0056b3;
+    padding: 10px 20px; /* Slightly larger clickable area */
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    font-size: 1em;
+}
+
+p a:hover {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .proverb-list {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+    .main-phrase {
+        font-size: 1.8em; /* Adjust large font size */
+    }
+    .grid-item {
+         font-size: 3em; /* Adjust emoji size */
+    }
+     /* Remove h1 adjustment as h1 is removed */
+     /* h1 { font-size: 2em; } */
+     .meaning-group {
+        margin-bottom: 30px;
+     }
+     .proverb-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+     }
+      p a {
+        margin-top: 30px;
+     }
+      .proverb-list { /* Adjust top margin for list on smaller screens */
+        margin-top: 30px;
+      }
+}
+
+@media (max-width: 480px) {
+     .main-phrase {
+        font-size: 1.6em; /* Further adjust large font size */
+    }
+    .grid-item {
+         font-size: 2.5em; /* Adjust emoji size */
+    }
+     /* Remove h1 adjustment as h1 is removed */
+     /* h1 { font-size: 1.6em; } */
+    .emoji-grid-container {
+        gap: 10px; /* Reduce gap */
+    }
+     .proverb-list { /* Adjust top margin for list on smallest screens */
+        margin-top: 20px;
+      }
+}
