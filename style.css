@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0; /* Base padding removed */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to the top */
@@ -12,9 +12,10 @@ body {
     color: #333;
     line-height: 1.6;
     text-align: left; /* Ensure all text within body is left-aligned */
+    padding-top: 60px; /* --- Add padding to the top of the body to make space for the fixed header --- */
 }
 
-/* --- Main Emoji Grid Styling (Keep this as is for the index page) --- */
+/* --- Main Emoji Grid Styling --- */
 .emoji-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -51,27 +52,25 @@ body {
 }
 
 
-/* --- Proverbs List Page Styling (Minimalist & Clean) --- */
+/* --- Proverbs List Page Styling --- */
 .proverb-list {
     width: 100%;
-    max-width: 800px; /* Max width for the list container */
-    margin-top: 40px; /* Space from the top of the page */
-    margin-bottom: 40px; /* Space at the bottom */
-    padding: 0 20px; /* Add horizontal padding */
-    box-sizing: border-box; /* Include padding in width */
+    max-width: 800px;
+    margin-top: 0; /* Removed margin-top as padding on body makes space */
+    margin-bottom: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* Removed .meaning-group and .meaning-group-title styling */
-/* .meaning-group { ... } */
-/* .meaning-group-title { ... } */
+/* .meaning-group container is removed from HTML */
 
 
 /* Style for individual proverb items - WELL SPACED & LINE SEPARATION */
 .proverb-item {
-    margin-bottom: 0; /* Remove margin between items */
-    padding-top: 40px; /* Add padding at the top of each item */
-    padding-bottom: 40px; /* Add padding at the bottom of each item */
-    border-bottom: 1px solid #ddd; /* Thin, light grey line */
+    margin-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
@@ -83,73 +82,95 @@ body {
 }
 
 .proverb-list .proverb-item:last-child {
-    border-bottom: none; /* No border on the very last item */
-    padding-bottom: 0; /* No bottom padding on the very last item */
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 
 /* Style for the main Proverb/Idiom phrase (MUCH LARGER text) */
 .main-phrase {
-    font-size: 2.8em; /* MUCH LARGER font size */
+    font-size: 2.8em;
     font-weight: bold;
     margin-top: 0;
-    margin-bottom: 15px; /* --- Increased space between main phrase and details --- */
+    margin-bottom: 15px;
     color: #111;
     word-wrap: break-word;
     line-height: 1.2;
 }
 
-/* Style for the Details container */
+/* Style for the Details container (wrapper for meaning and language/translation) */
 .details {
-    /* Removed font size/color from container, inner divs will handle */
-    /* font-size: 1em; */
-    /* color: #555; */
-    line-height: 1.6; /* Keep line height for spacing within details */
     word-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-/* Style for the Meaning text (first line of details) */
+/* Style for the Meaning text */
 .meaning-text {
-    font-size: 1em; /* Standard body text size */
-    color: #555;
-    margin-bottom: 5px; /* --- Space between meaning line and translation line --- */
-    display: block; /* Ensure it takes its own line */
-}
-
-/* Style for the Translation/Language text (second line of details) */
-.translation-language-text {
-    font-size: 1em; /* Standard body text size */
-    color: #555;
-    display: block; /* Ensure it takes its own line */
-}
-
-
-/* Style for the back link */
-p a {
-    display: inline-block;
-    margin-top: 40px;
-    text-decoration: none;
-    color: #0056b3;
-    padding: 10px 20px;
-    border: 1px solid #0056b3;
-    border-radius: 5px;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1.6;
 }
 
-p a:hover {
-    background-color: #0056b3;
-    color: white;
-    border-color: #0056b3;
+/* Style for the Language/Translation block */
+.translation-language-block {
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.5;
+    margin-top: 0;
 }
+
+/* Style for original script, transliteration, literal translation, language */
+.original-script {
+    /* Consider a font that supports various scripts well */
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-size: 1em;
+    color: #333;
+}
+
+.transliteration, .literal-translation, .language {
+     /* Style for labels like "Transliteration:" could go here if needed */
+     /* e.g., font-weight: bold; */
+}
+
+
+/* --- Style for the fixed back link --- */
+.back-link-container {
+    position: fixed; /* --- Fix position relative to the viewport --- */
+    top: 0; /* Align to the top edge */
+    left: 0; /* Align to the left edge */
+    padding: 15px 20px; /* --- Add padding around the link --- */
+    background-color: #fff8f5; /* Match body background */
+    z-index: 1000; /* Ensure it's above other content */
+    width: 100%; /* Make it full width for touch targets */
+    box-sizing: border-box; /* Include padding in width */
+    border-bottom: 1px solid #eee; /* Optional: thin line below the header area */
+}
+
+.back-link {
+    font-size: 1.5em; /* Larger arrow */
+    text-decoration: none;
+    color: #0056b3; /* Link color */
+    transition: color 0.2s ease;
+    display: inline-block; /* Needed for padding/margins */
+}
+
+.back-link:hover {
+    color: #003366; /* Darker color on hover */
+}
+
 
 /* Optional: Responsive adjustments */
 @media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* Adjust body padding for fixed header on smaller screens */
+    }
     .proverb-list {
         padding: 0 10px;
-        margin-top: 30px;
+        margin-top: 0; /* Remove margin-top as body padding handles space */
         margin-bottom: 30px;
     }
     .main-phrase {
@@ -162,12 +183,18 @@ p a:hover {
         padding-top: 30px;
         padding-bottom: 30px;
      }
-      p a {
-        margin-top: 30px;
+     .back-link-container {
+        padding: 10px 15px; /* Adjust padding */
+     }
+     .back-link {
+        font-size: 1.3em; /* Adjust arrow size */
      }
 }
 
 @media (max-width: 480px) {
+     body {
+        padding-top: 40px; /* Adjust body padding for fixed header on smallest screens */
+     }
      .main-phrase {
         font-size: 1.8em;
     }
@@ -182,10 +209,13 @@ p a:hover {
         padding-bottom: 20px;
      }
       .proverb-list {
-        margin-top: 20px;
+        margin-top: 0; /* Remove margin-top */
         margin-bottom: 20px;
       }
-      p a {
-        margin-top: 20px;
+      .back-link-container {
+        padding: 8px 10px; /* Further adjust padding */
       }
+      .back-link {
+        font-size: 1.2em; /* Further adjust arrow size */
+     }
 }
