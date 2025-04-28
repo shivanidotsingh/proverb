@@ -1,3 +1,4 @@
+/* General Body and Page Layout */
 body {
     font-family: sans-serif; /* Or choose a nice web font */
     margin: 0;
@@ -8,13 +9,17 @@ body {
     min-height: 100vh; /* Make body at least viewport height */
     background-color: #f4f4f4; /* Light background */
     color: #333;
+    line-height: 1.6; /* Improve readability for body text */
 }
 
 h1 {
+    margin-top: 0;
     margin-bottom: 30px;
     color: #0056b3; /* A shade of blue */
+    text-align: center;
 }
 
+/* --- Main Emoji Grid Styling --- */
 .emoji-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
@@ -38,6 +43,7 @@ h1 {
     aspect-ratio: 1 / 1; /* Keep items square */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+    text-align: center; /* Ensure emoji stays centered */
 }
 
 .grid-item:hover {
@@ -46,15 +52,46 @@ h1 {
     cursor: pointer; /* Indicate it's clickable */
 }
 
-p {
+/* --- Proverbs List Page Styling --- */
+.proverb-list {
+    width: 100%; /* Take full width available in padding */
+    max-width: 700px; /* Max width for the list container */
     margin-top: 20px;
-    font-size: 1em;
-    color: #555;
 }
 
-/* Optional: Adjust font size for very small screens if needed */
-@media (max-width: 400px) {
-    .grid-item {
-        font-size: 2.5em;
-    }
+.meaning-group {
+    margin-bottom: 30px; /* Space out different meaning groups */
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
+
+/* Style for the Meaning Group Title (as a less prominent label/tag) */
+.meaning-group-title {
+    margin-top: 0;
+    margin-bottom: 15px; /* Space below the title */
+    padding-bottom: 8px; /* Space below the text and before the line */
+    border-bottom: 1px dashed #ccc; /* A subtle dashed line separator */
+    color: #555; /* A muted color */
+    font-size: 1em; /* Standard text size, smaller than main-phrase */
+    font-weight: normal; /* Not bold */
+    font-style: italic; /* Make it italic to distinguish */
+    line-height: 1.4; /* Improve readability */
+}
+
+/* Style for individual proverb items within the group */
+.proverb-item {
+    margin-bottom: 20px; /* Space between each proverb item */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Solid line between proverbs */
+}
+
+.proverb-item:last-child {
+    border-bottom: none; /* No border on the last item in a group */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Style for the main Proverb/Idiom phrase (THIS IS THE LARGEST TEXT) */
