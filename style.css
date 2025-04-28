@@ -45,8 +45,8 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.grid-item:nth-child(3n) { border-right: none; }
-.grid-item:nth-child(n + 7) { border-bottom: none; }
+.grid-item:nth-child(5n) { border-right: none; }
+.grid-item:nth-child(n + 21) { border-bottom: none; }
 
 .grid-item:hover {
     transform: scale(1.05);
