@@ -59,32 +59,25 @@ body {
     margin-bottom: 40px; /* Space at the bottom */
     padding: 0 20px; /* Add horizontal padding */
     box-sizing: border-box; /* Include padding in width */
-    /* No background, border, shadow here */
-    /* Removed padding-top/bottom from here, moved to proverb-item padding */
 }
 
-/* Removed .meaning-group styling as the element is removed from HTML */
+/* Removed .meaning-group and .meaning-group-title styling */
 /* .meaning-group { ... } */
-/* Removed .meaning-group-title styling as the element is removed from HTML */
 /* .meaning-group-title { ... } */
 
 
 /* Style for individual proverb items - WELL SPACED & LINE SEPARATION */
 .proverb-item {
-    margin-bottom: 0; /* --- Remove margin between items --- */
-    padding-top: 40px; /* --- Add padding at the top of each item --- */
-    padding-bottom: 40px; /* --- Add padding at the bottom of each item --- */
-    /* --- Thin line separating proverbs --- */
+    margin-bottom: 0; /* Remove margin between items */
+    padding-top: 40px; /* Add padding at the top of each item */
+    padding-bottom: 40px; /* Add padding at the bottom of each item */
     border-bottom: 1px solid #ddd; /* Thin, light grey line */
-    /* Removed background, inner padding */
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
 }
 
-/* The border-bottom will now appear after every item */
-/* Need to remove border-top from the first item, and border-bottom from the last */
-
+/* Adjust padding for the very first and last items */
 .proverb-list .proverb-item:first-child {
     padding-top: 0; /* No top padding on the very first item */
 }
@@ -100,21 +93,38 @@ body {
     font-size: 2.8em; /* MUCH LARGER font size */
     font-weight: bold;
     margin-top: 0;
-    margin-bottom: 12px; /* Space between the phrase and details */
-    color: #111; /* Bolder color */
+    margin-bottom: 15px; /* --- Increased space between main phrase and details --- */
+    color: #111;
     word-wrap: break-word;
     line-height: 1.2;
 }
 
-/* Style for the Details (Language, Translation, Meaning - smaller text) */
+/* Style for the Details container */
 .details {
-    font-size: 1em; /* Standard body text size */
-    color: #555;
-    line-height: 1.6;
+    /* Removed font size/color from container, inner divs will handle */
+    /* font-size: 1em; */
+    /* color: #555; */
+    line-height: 1.6; /* Keep line height for spacing within details */
     word-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0;
 }
+
+/* Style for the Meaning text (first line of details) */
+.meaning-text {
+    font-size: 1em; /* Standard body text size */
+    color: #555;
+    margin-bottom: 5px; /* --- Space between meaning line and translation line --- */
+    display: block; /* Ensure it takes its own line */
+}
+
+/* Style for the Translation/Language text (second line of details) */
+.translation-language-text {
+    font-size: 1em; /* Standard body text size */
+    color: #555;
+    display: block; /* Ensure it takes its own line */
+}
+
 
 /* Style for the back link */
 p a {
