@@ -112,7 +112,7 @@ body {
     font-weight: bold;
     margin-top: 0; /* Space above handled by language-translit-above margin-bottom */
     margin-bottom: 15px; /* Space between the phrase and details below */
-    color: #111;
+    color: #555;
     word-wrap: break-word;
     line-height: 1.2;
     /* Inherit text-align: left from body */
@@ -129,8 +129,8 @@ body {
 
 /* Style for Literal Translation */
 .literal-translation {
-    font-size: 1em; /* Standard body text size */
-    color: #555;
+    font-size: 2.8em; /* Standard body text size */
+    color: #111;
     margin-bottom: 8px; /* Space below Literal Translation */
     display: block; /* Ensure it takes its own line */
     line-height: 1.6;
