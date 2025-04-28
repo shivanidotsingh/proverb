@@ -11,7 +11,7 @@ body {
     background-color: #fff8f5; /* Soft warm white background */
     color: #333;
     line-height: 1.6;
-    text-align: left; /* --- Ensure all text within body is left-aligned --- */
+    text-align: left; /* Ensure all text within body is left-aligned */
 }
 
 /* --- Main Emoji Grid Styling (Keep this as is for the index page) --- */
@@ -60,25 +60,20 @@ body {
     padding: 0 20px; /* Add horizontal padding */
     box-sizing: border-box; /* Include padding in width */
     /* No background, border, shadow here */
+    /* Removed padding-top/bottom from here, moved to proverb-item padding */
 }
 
-.meaning-group {
-    margin-bottom: 50px; /* --- More space between different meaning groups --- */
-    padding: 0;
-    /* Removed background, border, box-shadow */
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-}
-
+/* Removed .meaning-group styling as the element is removed from HTML */
+/* .meaning-group { ... } */
 /* Removed .meaning-group-title styling as the element is removed from HTML */
 /* .meaning-group-title { ... } */
 
 
-/* Style for individual proverb items within the group - WELL SPACED */
+/* Style for individual proverb items - WELL SPACED & LINE SEPARATION */
 .proverb-item {
-    margin-bottom: 40px; /* --- More space between each proverb item --- */
-    padding-bottom: 40px;
+    margin-bottom: 0; /* --- Remove margin between items --- */
+    padding-top: 40px; /* --- Add padding at the top of each item --- */
+    padding-bottom: 40px; /* --- Add padding at the bottom of each item --- */
     /* --- Thin line separating proverbs --- */
     border-bottom: 1px solid #ddd; /* Thin, light grey line */
     /* Removed background, inner padding */
@@ -87,21 +82,28 @@ body {
     padding-right: 0;
 }
 
-.proverb-item:last-child {
-    border-bottom: none; /* No border on the last item in a group */
-    padding-bottom: 0;
-    margin-bottom: 0;
+/* The border-bottom will now appear after every item */
+/* Need to remove border-top from the first item, and border-bottom from the last */
+
+.proverb-list .proverb-item:first-child {
+    padding-top: 0; /* No top padding on the very first item */
 }
 
-/* Style for the main Proverb/Idiom phrase (MAKE THIS MUCH LARGER) */
+.proverb-list .proverb-item:last-child {
+    border-bottom: none; /* No border on the very last item */
+    padding-bottom: 0; /* No bottom padding on the very last item */
+}
+
+
+/* Style for the main Proverb/Idiom phrase (MUCH LARGER text) */
 .main-phrase {
-    font-size: 2.8em; /* --- MUCH LARGER font size --- */
+    font-size: 2.8em; /* MUCH LARGER font size */
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 12px; /* Space between the phrase and details */
     color: #111; /* Bolder color */
     word-wrap: break-word;
-    line-height: 1.2; /* Tighter line spacing for large text */
+    line-height: 1.2;
 }
 
 /* Style for the Details (Language, Translation, Meaning - smaller text) */
@@ -141,16 +143,13 @@ p a:hover {
         margin-bottom: 30px;
     }
     .main-phrase {
-        font-size: 2.2em; /* Adjust large font size on smaller screens */
+        font-size: 2.2em;
     }
     .grid-item {
          font-size: 3em;
     }
-     .meaning-group {
-        margin-bottom: 40px;
-     }
      .proverb-item {
-        margin-bottom: 30px;
+        padding-top: 30px;
         padding-bottom: 30px;
      }
       p a {
@@ -160,7 +159,7 @@ p a:hover {
 
 @media (max-width: 480px) {
      .main-phrase {
-        font-size: 1.8em; /* Further adjust large font size on smallest screens */
+        font-size: 1.8em;
     }
     .grid-item {
          font-size: 2.5em;
@@ -168,11 +167,8 @@ p a:hover {
     .emoji-grid-container {
         max-width: 90%;
     }
-     .meaning-group {
-        margin-bottom: 30px;
-     }
      .proverb-item {
-        margin-bottom: 20px;
+        padding-top: 20px;
         padding-bottom: 20px;
      }
       .proverb-list {
