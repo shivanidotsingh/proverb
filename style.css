@@ -63,22 +63,27 @@ body {
 
 /* Style for individual proverb items - WELL SPACED & LINE SEPARATION */
 .proverb-item {
-    margin-bottom: 0; /* Remove margin between items */
-    padding-top: 40px; /* Add padding at the top of each item */
-    padding-bottom: 40px;
-    border-bottom: 1px solid #ddd; /* Thin, light grey line */
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-    display: flex; /* Use flexbox to control order if needed, or just for spacing */
-    flex-direction: column; /* Stack children vertically */
-    /* Removed old .details styling as the div is removed */
-    /* Removed .meaning-group styling as the div is removed */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding in the element's total width */
+    
+    /* --- Updated Flexbox and Width Properties --- */
+    flex-grow: 1; /* Allow items to grow to fill available space */
+    flex-shrink: 1; /* Allow items to shrink if needed */
+    flex-basis: 300px; /* Initial size hint */
+    min-width: 300px; /* Minimum width before stacking vertically */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    /* --------------------------------------------- */
+
+    display: flex; /* Use flexbox for content inside the item */
+    flex-direction: column; /* Stack content vertically within the item */
 }
 
 /* Adjust padding for the very first and last items */
 .proverb-list .proverb-item:first-child {
-    padding-top: 0;
+    padding-top: 15px;
 }
 
 .proverb-list .proverb-item:last-child {
