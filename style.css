@@ -78,7 +78,7 @@ body {
 
 /* Adjust padding for the very first and last items */
 .proverb-list .proverb-item:first-child {
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 .proverb-list .proverb-item:last-child {
