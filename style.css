@@ -242,3 +242,70 @@ body {
         margin-top: 20px;
       }
 }
+
+/* Add these rules to your existing style.css file */
+
+/* Container using CSS Columns for masonry effect */
+.masonry-container {
+    /* Adjust column-count based on how many columns you want on wider screens */
+    column-count: 4;
+    column-gap: 10px; /* Gap between columns */
+    padding: 20px 10px; /* Add some padding around the columns */
+    max-width: 1200px; /* Optional: limit the max width of the container */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+/* Style for individual items (the links containing images) in the masonry view */
+.masonry-item {
+    display: block; /* Essential for items to flow correctly in columns */
+    margin-bottom: 10px; /* Space between items within the same column */
+    break-inside: avoid-column; /* Hint to the browser to avoid breaking items across columns */
+    text-decoration: none; /* Remove link underline */
+    /* Remove any background, border, or shadow if you want the minimalist style */
+    /* background-color: transparent; */
+    /* border: none; */
+    /* box-shadow: none; */
+}
+
+/* Style for the image inside the masonry item link */
+.masonry-item img {
+    display: block; /* Remove any extra space below the image */
+    width: 100%; /* Image takes the full width of its column */
+    height: auto; /* Height adjusts proportionally to maintain aspect ratio */
+    border-radius: 5px; /* Optional: slight rounded corners on images */
+    /* Do NOT set a fixed height or object-fit: cover if you want true masonry with varying heights */
+}
+
+/* Optional hover effect for the masonry images */
+.masonry-item:hover img {
+    opacity: 0.9; /* Slightly dim the image on hover */
+    transition: opacity 0.2s ease;
+}
+
+/* Responsive adjustments for the number of columns based on screen width */
+@media (max-width: 992px) {
+    .masonry-container {
+        column-count: 3; /* 3 columns on medium-large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-container {
+        column-count: 2; /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-container {
+        column-count: 1; /* 1 column on small screens */
+        column-gap: 0; /* Remove gap if only one column */
+        padding: 10px 5px; /* Adjust padding for smaller screens */
+    }
+    .masonry-item {
+        margin-bottom: 5px; /* Smaller space between items in single column */
+    }
+}
+
+/* Assuming you already have .back-link-container and .back-link styling for the optional back button */
+/* .back-link-container { ... } */
+/* .back-link { ... } */
