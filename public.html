@@ -3,244 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idioms and Proverbs</title> <link rel="stylesheet" href="style.css"> 
+    <title>Shuffle and Select</title>
+    <link rel="stylesheet" href="style.css"> {{-- Link to your main stylesheet --}}
+    <link rel="stylesheet" href="card_stack.css"> {{-- Link to the specific card stack styles --}}
 </head>
 <body>
 
-    <div class="masonry-container">
+    <div class="container">
+        <h1>Select Your Proverb Category</h1>
 
-        /* --- Set 1 of 25 Images --- */
-        <a href="ice.html" class="masonry-item">
-            <img src="images/ice.jpeg" alt="Ice Category"> 
-        </a>
-        <a href="eyes.html" class="masonry-item">
-            <img src="images/eyes.png" alt="Eyes Category"> 
-        </a>
-         <a href="water.html" class="masonry-item">
-            <img src="images/water.png" alt="Water Category">
-        </a>
-         <a href="fire.html" class="masonry-item">
-            <img src="images/fire.jpeg" alt="Fire Category"> 
-        </a>
-         <a href="salt.html" class="masonry-item">
-            <img src="images/salt.png" alt="Salt Category"> 
-        </a>
-         <a href="tree.html" class="masonry-item">
-            <img src="images/tree.jpeg" alt="Tree Category"> 
-        </a>
-         <a href="hands.html" class="masonry-item">
-            <img src="images/hands.jpeg" alt="Hands Category"> 
-        </a>
-         <a href="rain.html" class="masonry-item">
-            <img src="images/rain.png" alt="Rain Category"> 
-        </a>
-         <a href="milk.html" class="masonry-item">
-            <img src="images/milk.png" alt="Milk Category"> 
-        </a>
-         <a href="wood.html" class="masonry-item">
-            <img src="images/wood.png" alt="Wood Category"> 
-        </a>
-         <a href="rice.html" class="masonry-item">
-            <img src="images/rice.png" alt="Rice Category"> 
-        </a>
-         <a href="fish.html" class="masonry-item">
-            <img src="images/fish.png" alt="Fish Category"> 
-        </a>
-         <a href="monkey.html" class="masonry-item">
-            <img src="images/monkey.png" alt="Monkey Category"> 
-        </a>
-         <a href="bird.html" class="masonry-item">
-            <img src="images/bird.png" alt="Bird Category"> 
-        </a>
-         <a href="drink.html" class="masonry-item">
-            <img src="images/drink.png" alt="Drink Category"> 
-        </a>
-         <a href="gold.html" class="masonry-item">
-            <img src="images/gold.png" alt="Gold Category"> 
-        </a>
-         <a href="lion.html" class="masonry-item">
-            <img src="images/lion.png" alt="Lion Category"> 
-        </a>
-         <a href="fruit.html" class="masonry-item">
-            <img src="images/fruit.png" alt="Fruit Category"> 
-        </a>
-         <a href="cow.html" class="masonry-item">
-            <img src="images/cow.png" alt="Cow Category"> 
-        </a>
-         <a href="moon.html" class="masonry-item">
-            <img src="images/moon.png" alt="Moon Category">
-        </a>
-         <a href="dog.html" class="masonry-item">
-            <img src="images/dog.png" alt="Dog Category"> 
-        </a>
-         <a href="spoon.html" class="masonry-item">
-            <img src="images/spoon.png" alt="Spoon Category"> 
-        </a>
-         <a href="sun.html" class="masonry-item">
-            <img src="images/sun.png" alt="Sun Category"> 
-        </a>
-         <a href="mountain.html" class="masonry-item">
-            <img src="images/mountain.png" alt="Mountain Category">
-        </a>
-          <a href="flower.html" class="masonry-item">
-            <img src="images/flower.png" alt="Flower Category"> 
-        </a>
+        {{-- The area where the cards will be stacked --}}
+        <div id="card-stack-container">
+            {{-- Cards will be added here by JavaScript --}}
+            {{-- Each card will represent a category --}}
+            {{-- Example of a card structure (JS will create these dynamically): --}}
+            {{-- <a href="animals.html" class="card" data-category="animals" style="--i: 0;"> --}}
+            {{--     <img src="images/medieval_animal.jpg" alt="Animals"> --}}
+            {{--     <span class="card-title">Animals</span> --}}
+            {{-- </a> --}}
+        </div>
 
-        /* --- Set 2 of 25 Images (Repeat the block from Set 1) --- */
-         <a href="ice.html" class="masonry-item">
-            <img src="images/ice.png" alt="Ice Category"> 
-        </a>
-        <a href="eyes.html" class="masonry-item">
-            <img src="images/eyes.png" alt="Eyes Category"> 
-        </a>
-         <a href="water.html" class="masonry-item">
-            <img src="images/water.png" alt="Water Category">
-        </a>
-         <a href="fire.html" class="masonry-item">
-            <img src="images/fire.png" alt="Fire Category"> 
-        </a>
-         <a href="salt.html" class="masonry-item">
-            <img src="images/salt.png" alt="Salt Category"> 
-        </a>
-         <a href="tree.html" class="masonry-item">
-            <img src="images/tree.png" alt="Tree Category"> 
-        </a>
-         <a href="hands.html" class="masonry-item">
-            <img src="images/hands.png" alt="Hands Category"> 
-        </a>
-         <a href="rain.html" class="masonry-item">
-            <img src="images/rain.png" alt="Rain Category"> 
-        </a>
-         <a href="milk.html" class="masonry-item">
-            <img src="images/milk.png" alt="Milk Category"> 
-        </a>
-         <a href="wood.html" class="masonry-item">
-            <img src="images/wood.png" alt="Wood Category"> 
-        </a>
-         <a href="rice.html" class="masonry-item">
-            <img src="images/rice.png" alt="Rice Category"> 
-        </a>
-         <a href="fish.html" class="masonry-item">
-            <img src="images/fish.png" alt="Fish Category"> 
-        </a>
-         <a href="monkey.html" class="masonry-item">
-            <img src="images/monkey.png" alt="Monkey Category"> 
-        </a>
-         <a href="bird.html" class="masonry-item">
-            <img src="images/bird.png" alt="Bird Category"> 
-        </a>
-         <a href="drink.html" class="masonry-item">
-            <img src="images/drink.png" alt="Drink Category"> 
-        </a>
-         <a href="gold.html" class="masonry-item">
-            <img src="images/gold.png" alt="Gold Category"> 
-        </a>
-         <a href="lion.html" class="masonry-item">
-            <img src="images/lion.png" alt="Lion Category"> 
-        </a>
-         <a href="fruit.html" class="masonry-item">
-            <img src="images/fruit.png" alt="Fruit Category"> 
-        </a>
-         <a href="cow.html" class="masonry-item">
-            <img src="images/cow.png" alt="Cow Category"> 
-        </a>
-         <a href="moon.html" class="masonry-item">
-            <img src="images/moon.png" alt="Moon Category">
-        </a>
-         <a href="dog.html" class="masonry-item">
-            <img src="images/dog.png" alt="Dog Category"> 
-        </a>
-         <a href="spoon.html" class="masonry-item">
-            <img src="images/spoon.png" alt="Spoon Category"> 
-        </a>
-         <a href="sun.html" class="masonry-item">
-            <img src="images/sun.png" alt="Sun Category"> 
-        </a>
-         <a href="mountain.html" class="masonry-item">
-            <img src="images/mountain.png" alt="Mountain Category">
-        </a>
-          <a href="flower.html" class="masonry-item">
-            <img src="images/flower.png" alt="Flower Category"> 
-        </a>
+        <button id="shuffle-button">Shuffle Deck</button>
+    </div>
 
-        /* Repeat Set 1 again for a third block if desired */
-       <a href="ice.html" class="masonry-item">
-            <img src="images/ice.png" alt="Ice Category"> 
-        </a>
-        <a href="eyes.html" class="masonry-item">
-            <img src="images/eyes.png" alt="Eyes Category"> 
-        </a>
-         <a href="water.html" class="masonry-item">
-            <img src="images/water.png" alt="Water Category">
-        </a>
-         <a href="fire.html" class="masonry-item">
-            <img src="images/fire.png" alt="Fire Category"> 
-        </a>
-         <a href="salt.html" class="masonry-item">
-            <img src="images/salt.png" alt="Salt Category"> 
-        </a>
-         <a href="tree.html" class="masonry-item">
-            <img src="images/tree.png" alt="Tree Category"> 
-        </a>
-         <a href="hands.html" class="masonry-item">
-            <img src="images/hands.png" alt="Hands Category"> 
-        </a>
-         <a href="rain.html" class="masonry-item">
-            <img src="images/rain.png" alt="Rain Category"> 
-        </a>
-         <a href="milk.html" class="masonry-item">
-            <img src="images/milk.png" alt="Milk Category"> 
-        </a>
-         <a href="wood.html" class="masonry-item">
-            <img src="images/wood.png" alt="Wood Category"> 
-        </a>
-         <a href="rice.html" class="masonry-item">
-            <img src="images/rice.png" alt="Rice Category"> 
-        </a>
-         <a href="fish.html" class="masonry-item">
-            <img src="images/fish.png" alt="Fish Category"> 
-        </a>
-         <a href="monkey.html" class="masonry-item">
-            <img src="images/monkey.png" alt="Monkey Category"> 
-        </a>
-         <a href="bird.html" class="masonry-item">
-            <img src="images/bird.png" alt="Bird Category"> 
-        </a>
-         <a href="drink.html" class="masonry-item">
-            <img src="images/drink.png" alt="Drink Category"> 
-        </a>
-         <a href="gold.html" class="masonry-item">
-            <img src="images/gold.png" alt="Gold Category"> 
-        </a>
-         <a href="lion.html" class="masonry-item">
-            <img src="images/lion.png" alt="Lion Category"> 
-        </a>
-         <a href="fruit.html" class="masonry-item">
-            <img src="images/fruit.png" alt="Fruit Category"> 
-        </a>
-         <a href="cow.html" class="masonry-item">
-            <img src="images/cow.png" alt="Cow Category"> 
-        </a>
-         <a href="moon.html" class="masonry-item">
-            <img src="images/moon.png" alt="Moon Category">
-        </a>
-         <a href="dog.html" class="masonry-item">
-            <img src="images/dog.png" alt="Dog Category"> 
-        </a>
-         <a href="spoon.html" class="masonry-item">
-            <img src="images/spoon.png" alt="Spoon Category"> 
-        </a>
-         <a href="sun.html" class="masonry-item">
-            <img src="images/sun.png" alt="Sun Category"> 
-        </a>
-         <a href="mountain.html" class="masonry-item">
-            <img src="images/mountain.png" alt="Mountain Category">
-        </a>
-          <a href="flower.html" class="masonry-item">
-            <img src="images/flower.png" alt="Flower Category"> 
-        </a>
-
-    </div> 
+    <script src="card_stack.js"></script> {{-- Link to the JavaScript file --}}
 
 </body>
 </html>
