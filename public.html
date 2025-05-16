@@ -4,29 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuffle and Select</title>
-    <link rel="stylesheet" href="style.css"> {{-- Link to your main stylesheet --}}
-    <link rel="stylesheet" href="card_stack.css"> {{-- Link to the specific card stack styles --}}
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="card_stack.css"> 
 </head>
 <body>
 
     <div class="container">
-        <h1>Select Your Proverb Category</h1>
-
-        {{-- The area where the cards will be stacked --}}
         <div id="card-stack-container">
-            {{-- Cards will be added here by JavaScript --}}
-            {{-- Each card will represent a category --}}
-            {{-- Example of a card structure (JS will create these dynamically): --}}
-            {{-- <a href="animals.html" class="card" data-category="animals" style="--i: 0;"> --}}
-            {{--     <img src="images/medieval_animal.jpg" alt="Animals"> --}}
-            {{--     <span class="card-title">Animals</span> --}}
-            {{-- </a> --}}
+            <a href="animals.html" class="card" data-category="animals" style="--i: 0;"> 
+                <img src="images/medieval_animal.jpg" alt="Animals"> 
+             <span class="card-title">Animals</span> 
+        </a> 
         </div>
 
         <button id="shuffle-button">Shuffle Deck</button>
     </div>
 
-    <script src="card_stack.js"></script> {{-- Link to the JavaScript file --}}
-
+    <script src="card_stack.js"></script> 
 </body>
 </html>
